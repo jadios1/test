@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page contains all the things I'm learning how to do in HTML">
+    <title>Learning HTML</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            font-size: 22px;
+        }
+
+        body {
+            background-color: rgba(69, 5, 53, 0.3333);
+            color: whitesmoke;
+            cursor: cell;
+        }
+
+        strong {
+            font-size: 32px;
+        }
+    </style>x
+</head>
+<body class="text-gray-100 cursor-cell">
+    <div class="flex flex-col items-center mt-4">
+        <div>Cześć to strona <strong class="text-2xl mx-2">Blancos</strong></div>
+        <img src="to my.jpg" width="400" alt="A description of the image" class="mt-4">
+    </div>
+    <div class="flex flex-col items-center text-2xl ">
+        piosenki:
+    </div>
+    <div class="flex flex-col items-center text-1xl">
+        <p>-biale wyjscie <span class="bg-red-400">ft.pawella</span></p>
+        <!-- Add this audio tag below -->
+        <audio controls>
+            <source src="nie mam pojecia.wav" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    
+    
+    
+</body>
+</html>
