@@ -21,13 +21,18 @@
         strong {
             font-size: 32px;
         }
-    </style>x
+        .image
+        {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 <body class="text-gray-100 cursor-cell">
     <div class="flex flex-col items-center mt-4">
         <div>Cześć to strona <strong class="text-2xl mx-2">Blancos</strong></div>
-        <img src="to my.jpg" width="400" alt="A description of the image" class="mt-4">
+        <img class="image " src="to my.jpg" width="400" alt="A description of the image">
     </div>
+    
     <div class="flex flex-col items-center text-2xl ">
         piosenki:
     </div>
@@ -47,4 +52,21 @@
             <source src="perfum.mp3">
         </audio>
     </div>
-    
+    <div class="flex flex-col items-center">
+        <strong>kliknij na kota zeby dostac niespodzianke :DDDD</strong>
+    </div>
+    <div>
+        <audio id="party" src="AHAHAH TOP 1 freestyle.mp3"></audio>
+        <div onclick="playAudio('party')" class="mt-2 flex flex-col items-center">
+            <img src="dj-cat-party-on-0g1ma6be8h3bhpun.gif" width="200">
+        </div>
+    </div>
+
+    <script>
+        function playAudio(id)
+        {
+            var audio = document.getElementById(id);
+            audio.play();
+        }
+    </script>
+</body>
