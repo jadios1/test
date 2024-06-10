@@ -1,72 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This page contains all the things I'm learning how to do in HTML">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page contains all the things I'm learning how to do in HTML"
+    />
     <title>Learning HTML</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <style>
-        html {
-            font-size: 22px;
-        }
+      html {
+        font-size: 22px;
+      }
 
-        body {
-            background-color: rgba(39, 5, 53, 0.3333);
-            color: whitesmoke;
-            cursor: cell;
-        }
+      body {
+        background-color: rgba(39, 5, 53, 0.3333);
+        color: whitesmoke;
+        cursor: cell;
+      }
 
-        strong {
-            font-size: 32px;
-        }
-        .image
-        {
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-        }
+      strong {
+        font-size: 32px;
+      }
+      .image {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      }
     </style>
-</head>
-<body class="text-gray-100 cursor-cell">
+  </head>
+  <body class="text-gray-100 cursor-cell">
     <div class="flex flex-col items-center mt-4">
-        <div>Cześć to strona <strong class="text-2xl mx-2">Blancos</strong></div>
-        <img class="image " src="to my.jpg" width="400" alt="A description of the image">
+      <div>Cześć to strona <strong class="text-2xl mx-2">Blancos</strong></div>
+      <img
+        class="image"
+        src="to my.jpg"
+        width="400"
+        alt="A description of the image"
+      />
     </div>
-    
-    <div class="flex flex-col items-center text-2xl ">
-        piosenki:
+
+    <div class="flex flex-col items-center text-2xl">piosenki:</div>
+    <div onclick="playAudio('')" class="flex flex-col items-center text-1xl">
+      <p>biale wyjscie.mp3 <span class="bg-red-400">ft.pawella</span></p>
+      <audio id="audio1" controls>
+        <source src="nie-mam-pojecia.mp3" type="audio/mpeg" />
+        Your browser does not support the audio tag.
+      </audio>
     </div>
     <div class="flex flex-col items-center text-1xl">
-        <p>biale wyjscie.mp3 <span class="bg-red-400">ft.pawella</span></p>
-        <!-- Add this audio tag below -->
-        <audio controls>
-            <source src="nie-mam-pojecia.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-    </div>
-    <div class="flex flex-col items-center text-1xl">
-        <p>
-            perfum.mp3
-        </p>
-        <audio controls>
-            <source src="perfum.mp3">
-        </audio>
-    </div>
-    <div class="flex flex-col items-center">
-        <strong>kliknij na kota zeby dostac niespodzianke :DDDD</strong>
+      <p>perfum.mp3</p>
+      <audio id="audio2" controls>
+        <source src="perfum.mp3" />
+      </audio>
     </div>
     <div>
-        <audio id="party" src="AHAHAH TOP 1 freestyle.mp3"></audio>
-        <div onclick="playAudio('party')" class="mt-2 flex flex-col items-center">
-            <img src="dj-cat-party-on-0g1ma6be8h3bhpun.gif" width="200">
-        </div>
+      <audio id="party" src="AHAHAH TOP 1 freestyle.mp3"></audio>
+      <div onclick="playAudio('party')" class="mt-2 flex flex-col items-center">
+        <img src="dj-cat-party-on-0g1ma6be8h3bhpun.gif" width="200" />
+      </div>
+    </div>
+    <audio id="biale wyjscie" src="nie-mam-pojecia.mp3"></audio>
+    <div onclick="playAudio('biale wyjscie')">
+        <p class="bg-white flex flex-col items-center mt-4" style="color : black">biale wyjscie.mp3</p>
+    </div>
+
+
+
     </div>
 
     <script>
-        function playAudio(id)
-        {
-            var audio = document.getElementById(id);
-            audio.play();
+      const password = "mypassword"; // Replace with your desired password
+
+      function playAudio(id) {
+        var audio = document.getElementById(id);
+        var userPassword = prompt("Please enter the password to play the audio:");
+
+        if (userPassword === password) {
+          audio.play();
+        } else {
+          alert("Incorrect password.");
         }
-    </script>
+      }
+
+      // Disabling controls and adding password protection for audio elements
+      document.querySelectorAll('div > p').forEach((p) => {
+      p.addEventListener('click', () => {
+        const audioId = p.nextElementSibling.id;
+        playAudio(audioId);
+      });
+    });
+  </script>
 </body>
+</html>
