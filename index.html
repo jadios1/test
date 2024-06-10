@@ -7,7 +7,7 @@
       name="description"
       content="This page contains all the things I'm learning how to do in HTML"
     />
-    <title>BLANCOS</title>
+    <title>Learning HTML</title>
     <link rel="stylesheet" href="main.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -30,6 +30,10 @@
       .image {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
       }
+      .piosenki
+      {
+        text-shadow: 0px 0px 30px black;
+      }
     </style>
   </head>
   <body class="text-gray-100 cursor-cell">
@@ -37,34 +41,20 @@
       <div>Cześć to strona <strong class="text-2xl mx-2">Blancos</strong></div>
       <img
         class="image"
-        src="to my.jpg"
-        width="400"
+        src="blancos.JPG"
+        width="650"
         alt="A description of the image"
       />
     </div>
 
-    <div class="flex flex-col items-center text-2xl">piosenki:</div>
-    <div onclick="playAudio('')" class="flex flex-col items-center text-1xl">
-      <p>biale wyjscie.mp3 <span class="bg-red-400">ft.pawella</span></p>
-      <audio id="audio1" controls>
-        <source src="nie-mam-pojecia.mp3" type="audio/mpeg" />
-        Your browser does not support the audio tag.
-      </audio>
-    </div>
-    <div class="flex flex-col items-center text-1xl">
-      <p>perfum.mp3</p>
-      <audio id="audio2" controls>
-        <source src="perfum.mp3" />
-      </audio>
-    </div>
-    <div>
+    <div class="flex flex-col items-center text-2xl piosenki">piosenki:</div>
       <audio id="party" src="AHAHAH TOP 1 freestyle.mp3"></audio>
-      <div onclick="playAudio('party')" class="mt-2 flex flex-col items-center">
-        <img src="dj-cat-party-on-0g1ma6be8h3bhpun.gif" width="200" />
+      <div onclick="playAudio('party')">
+        <p class="bg-white flex flex-col items-center mt-4" style="color : black">AHAHAH TOP 1 freestyle.mp3</p>
       </div>
     </div>
     <audio id="biale wyjscie" src="nie-mam-pojecia.mp3"></audio>
-    <div onclick="playAudio('biale wyjscie')">
+    <div onclick="playAudio('biale wyjscie')" >
         <p class="bg-white flex flex-col items-center mt-4" style="color : black">biale wyjscie.mp3</p>
     </div>
 
