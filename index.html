@@ -1,119 +1,186 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="This page contains all the things I'm learning how to do in HTML"
-    />
-    <title>Learning HTML</title>
-    <link rel="stylesheet" href="main.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <style>
-      html {
-        font-size: 22px;
-      }
+        .wpisz
+        {
+            font-family:  Calibri;
+            background-color:  #fff;
+        }
+        .wyszukiwanie
+        {
+            padding-top: 120px;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+        }
+        .wyszukiwanie2
+        {
+            width: 300px;
+            height: 30px;
+            outline-style: groove;
+            outline-width: 1px;
+        }
+        .przyciski
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
 
-      body {
-        background-color: rgba(39, 5, 53, 0.3333);
-        color: whitesmoke;
-        cursor: cell;
-      }
+        .box {
+    width: 420px;
+    height: 640px;
+    padding: 10px;
+    border: 3px solid black;
+    margin: auto; /* This will center the box */
+    overflow-y:scroll;
 
-      strong {
-        font-size: 32px;
-      }
-      .image {
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-      }
-      .piosenki
-      {
-        text-shadow: 0px 0px 30px black;
-      }
-      area {
-  display: none;
     }
-    .row {
-  display: flex;
-  justify-content: center; /* Centers the row container horizontally */
-    }
-
-.column {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centers the content of column horizontally */
-  flex-direction: column; /* Allows for vertical centering */
-    }
-
 
 
     </style>
-  </head>
-  <body class="text-gray-100 cursor-cell">
-    <div class="flex flex-col items-center mt-4">
-      <div>Cześć to strona <strong class="text-2xl mx-2">Blancos</strong></div>
+</head>
+    <audio id = "moje audio"></audio>
+
+    <body class="wpisz">
+      <div class="wyszukiwanie">
+        <select name = "piosenki" id ="piosenki" class="wyszukiwanie2">
+            <option value = "w moich bledach.wav">w moich bledach.wav</option>
+            <option value = "przejcie.wav">przejcie.wav</option>
+            <option value = "biale wyjscie.wav">biale wyjscie.wav</option>
+        </select>
     </div>
-    <div class="row flex-row items-center" >
-        <div class="column">
-            <img src="  jedrek.jpg" width="200">
+
+    <div class="przyciski">
+        <p>
+        <button onclick="playMusic()" type="button">
+            <img src="play.png" width="80" >
+        </button>
+
+        <button onclick="pauseAudio()" type="button">
+            <img src="pause.png" width="80">
+        </button>
+        </p>
+    </div>
+    <div>
+        <div class="box">
+            <pre>
+(spikiewicz)
+Wychodzą nuty 
+Wiec widze te szczęście 
+Większe pretensje sa do mnie 
+Co raz to mniejsze ode mnie 
+W tekście mowie co czuje tu wiecznie 
+W tekście nawijam 
+O niej 
+O benzie 
+S-ce 
+Rolexie i o tym ze nie śpie 
+O tym ze te uczucia to jest bezsens
+Kupiłem Cartier żeby 
+Mierzyc ten czas kiedy znow nie zasnę
+Moje serce znowu marne 
+Spadne 
+Chcą zobaczyć znowu na dnie
+Mnie (na dnie)
+Chce żeby było jak dawniej 
+Ladnie 
+Bez pragnień 
+Padne 
+To wstane 
+(na mnie, na mnie, na mnie)
+…
+(jadios)
+Nie myslalem kiedyś o zyciu 
+Nie myslalem kiedyś o zyciu, marzeniach, pieniądzach i byciu
+Nie myslalem kiedyś o tym co stanie się kiedy dorosnę 
+Czy będę na zbyciu
+Czy nowe pieniądze nie przyjdą w przykryciu 
+Czy nie będę nosił na szyi naszyjnika którego teraz bym nie nosił w życiu 
+Pije Liptona icetea
+Proszę już przy mnie zaśnij 
+Chce mieć zycie jak z baśni 
+Ale 
+Nie wiem czego chce już ona 
+Chce mieć zycie jak…
+…
+(spike)
+(wiesz dla mnie, nie kłamie)
+Myśli ciemne w glowach slychac tylko kurwa werble
+Pisze EP tylko przed lub przez ten 
+Widzisz tempo expres
+Mam sluchawki zawsze tak jak ten call center
+Tylko ja nie dzwonie 
+Odbieram wexel
+Wiesz dla mnie 
+Nie kłamie 
+Wszystko dla mnie chce żeby było tu jasne 
+Wiesz dla mnie 
+Nie klamie 
+Wszystko jasne chce żeby było tu dla mnie 
+…
+(jedrek)
+Z iskry chcą mieć plomien 
+To nie ich styl 
+Z wszystkich ich my 
+W sianie igly 
+Kiedy pustki znikly 
+W stanie nigdy by odpuscic 
+Nie pulpit po pliki 
+Puste słowa z pustej bani na te puste beaty
+ugh
+Proszę pani to nie filmy 
+Mam na stanie wersy 
+Nafurani z wizji owce wilki to kompleksy 
+To instynkt
+Od presji otoczenie zgina plecy 
+Chcą ten pałac mieć 
+A filmy ich do kinoteki 
+…
+(spike)
+Wiesz dla mnie 
+Nie kłamie 
+…
+(jadios)
+Pije Liptona icetea
+Proszę już przy mnie zaśnij 
+Chce mieć zycie jak z baśni 
+Ale 
+Nie wiem czego chce już ona 
+Chce mieć zycie jak z felietona 
+(z felietona)
+Ej 
+Zycie jak 
+Z felietona
+
+            </pre>
+
         </div>
-        <div class="column">
-            <img src="reszta.jpg" width="333">
-        </div>
-    </div>
-    <div class="flex flex-col items-center text-2xl piosenki">piosenki:</div>
-      <audio id="party" src="AHAHAH TOP 1 freestyle.mp3"></audio>
-      <div onclick="playAudio('party')">
-        <p class="bg-white flex flex-col items-center mt-4" style="color : black">AHAHAH TOP 1 freestyle.mp3</p>
-      </div>
-    </div>
-    <audio id="biale wyjscie" src="nie-mam-pojecia.mp3"></audio>
-    <div onclick="playAudio('biale wyjscie')" >
-        <p class="bg-white flex flex-col items-center mt-4" style="color : black">biale wyjscie.mp3</p>
-    </div>
-    </div>
-    <audio id="w moich bledach" src="w moich bledach.wav"></audio>
-    <div onclick="playAudio('w moich bledach')" >
-        <p class="bg-white flex flex-col items-center mt-4" style="color : black">w moich bledach.mp3</p>
     </div>
 
-
-    </div>
-
-    <script>
-      const password = "mypassword"; // Replace with your desired password
-
-      function playAudio(id) {
-        var audio = document.getElementById(id);
-        var userPassword = prompt("Please enter the password to play the audio:");
-
-        if (userPassword === password) {
-          audio.play();
-        } else {
-          alert("Incorrect password.");
-        }
-      }
-
-      // Disabling controls and adding password protection for audio elements
-      document.querySelectorAll('div > p').forEach((p) => {
-      p.addEventListener('click', () => {
-        const audioId = p.nextElementSibling.id;
-        playAudio(audioId);
-      });
-    });
-  </script>
 </body>
 </html>
- -->
-<html>
-  <title>przebudowa</title>
-</html>
-<body>
-  <h1>strona nie dziala narazie jest przebudowa bedzie goat coming soon...</h1>
-  <img src="to my.jpg">
-</body>
- 
+
+<script>
+    //tutaj musi byc zamiast moje audio nazwa nuty
+    var audio = document.getElementById("moje audio")
+    const songsSelect = document.getElementById("piosenki")
+
+    function playMusic()
+    {
+        var selectedSong = songsSelect.value;
+        audio.src = selectedSong; // Set the audio source to the selected song
+        audio.play()
+    }
+    function pauseAudio()
+    {
+        audio.pause()
+    }
+
+</script>
